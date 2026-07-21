@@ -1,69 +1,66 @@
-
-
-
 main {
     display: grid;
-	background-color: #c5af32; /* Cor de fundo para visualização */
-    grid-template-columns: 1fr 1fr 1fr;
-	max-width: 100%; /* Altura total da viewport */
+    background-color: #c5af32;
+    /* Faz as colunas se adaptarem automaticamente ao tamanho da tela */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 100%;
     gap: 20px;
-	height: auto; /* Altura total da viewport */
-}	
-
-	
-.txt{
-	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
-}
-.nova-section{
-	background-color: #4a9455;
-	color: white;
-	padding: 20px;
-	margin: 100px;
-	text-align: justify;
-	align-items: center;
-}
-.content-container{
-	background-color: #4a9455;
-	color: white;
-	min-height: 300px;
-	padding: 20px;
-	margin: 100px;
-	text-align: justify;
-	align-items: center;
+    height: auto;
+    padding: 20px; /* Substitui as margens laterais pesadas por um padding seguro */
 }
 
-.hero-section{
-	
-	background-color: #4a9455;
-	color: white;
-	min-height: 300px;
-	padding: 20px;
-	margin: 100px;
-	text-align: justify;
-	align-items: center;
+.txt {
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 }
 
-.site-header{
-	position: fixed;
-	top: 20px;
-	left: 5%;
-	right: 5%;
-	display: flex;
-	align-items: center;
-	gap: 20px;
-	margin-bottom: 10px;
-	background-color: rgba(245,238,226, 0.7);
-	border-radius: 15px;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-
-		
+.nova-section, .content-container, .hero-section {
+    background-color: #4a9455;
+    color: white;
+    min-height: 300px;
+    padding: 20px;
+    /* Margens ajustadas para não estourarem no celular */
+    margin: 15px 5px; 
+    text-align: justify;
 }
-.lst{
-display: flex;
-justify-content: space-between;
-list-style: none;
-padding: 0;
-gap:50px;
-margin:  10px;
 
+.site-header {
+    position: fixed;
+    top: 20px;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(245, 238, 226, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 1000; /* Garante que o menu fique sempre acima dos outros elementos */
+}
+
+.lst {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    gap: 50px;
+    margin: 10px;
+}
+
+/* Responsividade extra para celulares */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Força 1 única coluna empilhada no celular */
+        padding: 10px;
+    }
+    
+    .site-header {
+        left: 2%;
+        right: 2%;
+        padding: 5px 10px;
+    }
+    
+    .lst {
+        gap: 20px; /* Reduz o espaço dos links do menu para caber telas menores */
+    }
 }
