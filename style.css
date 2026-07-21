@@ -5,8 +5,9 @@ main {
     display: grid;
 	background-color: #c5af32; /* Cor de fundo para visualização */
     grid-template-columns: 1fr 1fr 1fr;
-	height: 100vh; /* Altura total da viewport */
-    gap: 20px; /* Ajuste o valor conforme preferir para criar o espaço */
+	max-width: 100%; /* Altura total da viewport */
+    gap: 20px;
+	height: auto; /* Altura total da viewport */
 }	
 
 	
