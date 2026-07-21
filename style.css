@@ -1,0 +1,68 @@
+
+
+
+main {
+    display: grid;
+	background-color: #c5af32; /* Cor de fundo para visualização */
+    grid-template-columns: 1fr 1fr 1fr;
+	height: 100vh; /* Altura total da viewport */
+    gap: 20px; /* Ajuste o valor conforme preferir para criar o espaço */
+}	
+
+	
+.txt{
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+}
+.nova-section{
+	background-color: #4a9455;
+	color: white;
+	padding: 20px;
+	margin: 100px;
+	text-align: justify;
+	align-items: center;
+}
+.content-container{
+	background-color: #4a9455;
+	color: white;
+	min-height: 300px;
+	padding: 20px;
+	margin: 100px;
+	text-align: justify;
+	align-items: center;
+}
+
+.hero-section{
+	
+	background-color: #4a9455;
+	color: white;
+	min-height: 300px;
+	padding: 20px;
+	margin: 100px;
+	text-align: justify;
+	align-items: center;
+}
+
+.site-header{
+	position: fixed;
+	top: 20px;
+	left: 5%;
+	right: 5%;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 10px;
+	background-color: rgba(245,238,226, 0.7);
+	border-radius: 15px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+		
+}
+.lst{
+display: flex;
+justify-content: space-between;
+list-style: none;
+padding: 0;
+gap:50px;
+margin:  10px;
+
+}
