@@ -1,19 +1,18 @@
-main {
-    display: grid;
-    background-color: #c5af32;
-    /* Faz as colunas se adaptarem automaticamente ao tamanho da tela */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 100%;
-    gap: 20px;
-    height: auto;
-    padding: 20px; /* Substitui as margens laterais pesadas por um padding seguro */
-}
+
 
 .txt {
-    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+    font-family: 'Arial', sans-serif;
+    color: rgb(79, 77, 224);
+    text-align: center;
+}
+.txt_card {
+    font-family: 'Arial', sans-serif;
+    color: rgb(79, 77, 224);
+    text-align: left;
+    font-size: 18px;
 }
 
-.nova-section, .content-container, .hero-section {
+.nova-section, .content-container {
     background-color: #4a9455;
     color: white;
     min-height: 300px;
@@ -46,6 +45,15 @@ main {
     gap: 50px;
     margin: 10px;
 }
+.card-section {
+  border: 1px solid rgba(161, 96, 96, 0.5); /* Borda com transparência */
+  border-radius: 15px; /* Borda suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra dupla para profundidade */
+  padding: 20px;
+  background: linear-gradient(to bottom, #f08b8b, #f5f5f5); /* Degradê gradiente do branco para um cinza claro */
+  min-height: 300px;
+  margin: 15px 5px;
+}
 
 /* Responsividade extra para celulares */
 @media (max-width: 768px) {
@@ -63,4 +71,5 @@ main {
     .lst {
         gap: 20px; /* Reduz o espaço dos links do menu para caber telas menores */
     }
+
 }

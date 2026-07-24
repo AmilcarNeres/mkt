@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- ========== METADADOS ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descrição da página">
+    <meta name="keywords" content="html, template, esqueleto">
+    <meta name="author" content="Seu Nome">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0066cc">
+
+    <!-- Open Graph (redes sociais) -->
+    <meta property="og:title" content="Título">
+    <meta property="og:description" content="Descrição">
+    <meta property="og:image" content="imagem.jpg">
+    <meta property="og:url" content="https://exemplo.com">
+
+    <!-- ========== TÍTULO E RECURSOS ========== -->
+    <title>Título da Página</title>
+    <base href="https://exemplo.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- ========== ESTILOS E SCRIPTS ========== -->
+    <style>
+        /* CSS inline (preferir arquivo externo) */
+        body { font-family: system-ui, sans-serif; }
+    </style>
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <!-- ========== CABEÇALHO ========== -->
+    <header>
+        <h1>Título Principal</h1>
+        <p>Subtítulo ou descrição</p>
+
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="https://www.uol.com.br"> vai</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+    <main>
+        <!-- Seção com artigo -->
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <article>
+                <header>
+                    <h3>Título do Artigo</h3>
+                    <time datetime="2026-07-23">23 de julho de 2026</time>
+                </header>
+
+                <p>
+                    Texto com <strong>negrito</strong>, <em>itálico</em>,
+                    <mark>destaque</mark>, <small>texto pequeno</small>,
+                    <s>riscado</s>, <u>sublinhado</u>,
+                    <abbr title="HyperText Markup Language">HTML</abbr>,
+                    <cite>uma citação</cite>,
+                    H<sub>2</sub>O e x<sup>2</sup>.
+                </p>
+
+                <blockquote cite="https://exemplo.com">
+                    <p>Citação em bloco de outra fonte.</p>
+                </blockquote>
+
+                <p>Como disse Einstein: <q>Imaginação é mais importante.</q></p>
+
+                <pre><code>
+function saudacao() {
+    console.log("Olá, mundo!");
+}
+                </code></pre>
+
+                <p>Use <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+                <p>A variável <var>x</var> recebe o valor <samp>42</samp>.</p>
+
+                <figure>
+                    <img src="imagem.jpg" alt="Descrição da imagem" width="600" height="400" loading="lazy">
+                    <figcaption>Legenda da imagem</figcaption>
+                </figure>
+
+                <picture>
+                    <source media="(min-width: 800px)" srcset="grande.webp" type="image/webp">
+                    <source media="(min-width: 400px)" srcset="medio.jpg">
+                    <img src="pequeno.jpg" alt="Imagem responsiva">
+                </picture>
+
+                <footer>
+                    <address>
+                        Escrito por <a href="mailto:autor@exemplo.com">Autor</a>.
+                    </address>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Seção lateral -->
+        <aside>
+            <h2>Conteúdo relacionado</h2>
+            <nav aria-label="Links relacionados">
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ========== LISTAS ========== -->
+        <section>
+            <h2>Listas</h2>
+            <ul>
+                <li>Item não ordenado</li>
+            </ul>
+            <ol>
+                <li>Item ordenado</li>
+            </ol>
+            <dl>
+                <dt>Termo</dt>
+                <dd>Definição</dd>
+            </dl>
+        </section>
+
+        <!-- ========== TABELA ========== -->
+        <section>
+            <h2>Tabela</h2>
+            <table>
+                <caption>Resumo de dados</caption>
+                <colgroup>
+                    <col style="background:#f0f0f0">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total: 1 registro</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- ========== FORMULÁRIO ========== -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <form action="/enviar" method="POST">
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" minlength="8">
+
+                    <label for="nascimento">Nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento">
+
+                    <label for="cor">Cor favorita:</label>
+                    <input type="color" id="cor" name="cor">
+
+                    <label for="nota">Nota (0-10):</label>
+                    <input type="range" id="nota" name="nota" min="0" max="10">
+
+                    <label for="busca">Buscar:</label>
+                    <input type="search" id="busca" name="busca" list="sugestoes">
+                    <datalist id="sugestoes">
+                        <option value="HTML">
+                        <option value="CSS">
+                    </datalist>
+
+                    <label for="arquivo">Arquivo:</label>
+                    <input type="file" id="arquivo" name="arquivo" accept="image/*">
+
+                    <label for="url">Website:</label>
+                    <input type="url" id="url" name="url">
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" min="1" max="100">
+
+                    <label for="cidade">Cidade:</label>
+                    <select id="cidade" name="cidade">
+                        <optgroup label="Sudeste">
+                            <option value="sp">São Paulo</option>
+                            <option value="rj">Rio de Janeiro</option>
+                        </optgroup>
+                        <optgroup label="Sul">
+                            <option value="pr">Curitiba</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"></textarea>
+
+                    <label>
+                        <input type="checkbox" name="aceite" required>
+                        Aceito os termos
+                    </label>
+
+                    <label>Gênero:</label>
+                    <input type="radio" name="genero" value="m"> Masculino
+                    <input type="radio" name="genero" value="f"> Feminino
+
+                    <p>Progresso: <progress value="70" max="100">70%</progress></p>
+                    <p>Disco: <meter value="0.6">60%</meter></p>
+                    <p>Resultado: <output name="resultado">0</output></p>
+
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- ========== MÍDIA ========== -->
+        <section>
+            <h2>Mídia</h2>
+            <video controls width="640" poster="capa.jpg">
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <track kind="subtitles" src="legendas.vtt" srclang="pt" label="Português">
+                Seu navegador não suporta vídeo.
+            </video>
+
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                <source src="audio.ogg" type="audio/ogg">
+            </audio>
+
+            <canvas id="meuCanvas" width="400" height="300">
+                Conteúdo alternativo para o canvas.
+            </canvas>
+
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="#0066cc"/>
+            </svg>
+
+            <iframe src="https://exemplo.com" title="Conteúdo externo" loading="lazy"></iframe>
+            <embed src="plugin.swf" type="application/x-shockwave-flash">
+            <object data="documento.pdf" type="application/pdf">
+                <p>Visualize o <a href="documento.pdf">PDF</a>.</p>
+            </object>
+        </section>
+
+        <!-- ========== ELEMENTOS INTERATIVOS ========== -->
+        <section>
+            <details>
+                <summary>Mais informações</summary>
+                <p>Conteúdo oculto que aparece ao clicar.</p>
+            </details>
+
+            <dialog id="meuDialog">
+                <p>Conteúdo do diálogo modal.</p>
+                <button onclick="this.closest('dialog').close()">Fechar</button>
+            </dialog>
+        </section>
+
+        <!-- ========== OUTROS ========== -->
+        <section>
+            <p>Texto com quebra de linha<br>
+               e uma linha horizontal abaixo:</p>
+            <hr>
+            <p>Palavra<wbr>quebrada<wbr>em<wbr>partes.</p>
+            <data value="42">Resposta final</data>
+        </section>
+    </main>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer>
+        <p>&copy; 2026 Sua Empresa. Todos os direitos reservados.</p>
+        <nav aria-label="Rodapé">
+            <a href="#privacidade">Privacidade</a> |
+            <a href="#termos">Termos</a>
+        </nav>
+    </footer>
+
+    <!-- ========== TEMPLATE E SLOT (Web Components) ========== -->
+    <template id="card-template">
+        <div class="card">
+            <slot name="titulo">Título padrão</slot>
+            <slot name="conteudo">Conteúdo padrão</slot>
+        </div>
+    </template>
+
+    <!-- Fallback para navegadores sem JS -->
+    <noscript>
+        <p>Ative o JavaScript para usar todos os recursos.</p>
+    </noscript>
+</body>
+</html>
